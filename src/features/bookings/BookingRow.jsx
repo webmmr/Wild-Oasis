@@ -1,17 +1,17 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 import { format, isToday } from "date-fns";
 
 import Tag from "../../ui/Tag";
 import Table from "../../ui/Table";
 
-import { formatCurrency } from "../../utils/helpers";
-import { formatDistanceFromNow } from "../../utils/helpers";
+import { formatCurrency } from "../../utilities/helpers";
+import { formatDistanceFromNow } from "../../utilities/helpers";
 
 const Cabin = styled.div`
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--color-grey-600);
-  font-family: "Sono";
 `;
 
 const Stacked = styled.div`
@@ -30,7 +30,6 @@ const Stacked = styled.div`
 `;
 
 const Amount = styled.div`
-  font-family: "Sono";
   font-weight: 500;
 `;
 
@@ -52,6 +51,7 @@ function BookingRow({
     unconfirmed: "blue",
     "checked-in": "green",
     "checked-out": "silver",
+    confirmed: "green",
   };
 
   return (

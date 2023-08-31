@@ -8,7 +8,8 @@ const StyledTable = styled.div`
   font-size: 1.4rem;
   background-color: var(--color-grey-0);
   border-radius: 7px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-y: scroll;
 `;
 
 const CommonRow = styled.div`
@@ -82,7 +83,7 @@ function Header({ children }) {
 function Row({ children }) {
   const { columns } = useContext(TableContext);
 
-  if (!columns.length) return <Empty />;
+  if (!columns.length) return <Empty>No data to show at the moment</Empty>;
 
   return (
     <StyledRow role="row" columns={columns} as="div">
