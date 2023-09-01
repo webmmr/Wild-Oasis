@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 import { format, isToday } from "date-fns";
 import {
@@ -10,7 +11,7 @@ import {
 import DataItem from "../../ui/DataItem";
 import { Flag } from "../../ui/Flag";
 
-import { formatDistanceFromNow, formatCurrency } from "../../utils/helpers";
+import { formatDistanceFromNow, formatCurrency } from "../../utilities/helpers";
 
 const StyledBookingDataBox = styled.section`
   /* Box */
@@ -110,7 +111,7 @@ function BookingDataBox({ booking }) {
     numNights,
     numGuests,
     cabinPrice,
-    extrasPrice,
+    extraPrice,
     totalPrice,
     hasBreakfast,
     observations,
@@ -169,7 +170,7 @@ function BookingDataBox({ booking }) {
 
             {hasBreakfast &&
               ` (${formatCurrency(cabinPrice)} cabin + ${formatCurrency(
-                extrasPrice
+                extraPrice
               )} breakfast)`}
           </DataItem>
 
