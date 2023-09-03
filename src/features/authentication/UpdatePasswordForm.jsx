@@ -7,8 +7,13 @@ import Input from "../../ui/Input";
 import { useUpdateUser } from "./useUpdateUser";
 
 function UpdatePasswordForm() {
-  const { register, handleSubmit, formState, getValues, reset } = useForm();
-  const { errors } = formState;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    getValues,
+    reset,
+  } = useForm();
 
   const { updateUser, isUpdating } = useUpdateUser();
 
@@ -19,7 +24,7 @@ function UpdatePasswordForm() {
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <FormRow
-        label="Password (min 8 characters)"
+        label="New Password (min 8 characters)"
         error={errors?.password?.message}
       >
         <Input
