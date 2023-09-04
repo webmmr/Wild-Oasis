@@ -19,7 +19,7 @@ function Login() {
 
       <LoginForm />
       <div>
-        <p>For Testing</p>
+        <p>For Testing use the following credential</p>
         <p>Email: admin@test.com</p>
         <p>Password: password1234</p>
       </div>
