@@ -7,7 +7,7 @@ function useSignUp() {
     mutationFn: signUpApi,
     onSuccess: (data) => {
       console.log(data);
-      toast.success("An user is created and confirmation email is sent");
+      toast.success("An user is created successfully");
     },
     onError: (error) => toast.error(error.message),
   });

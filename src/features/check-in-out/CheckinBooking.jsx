@@ -51,8 +51,6 @@ function CheckinBooking() {
 
   const totalBreakfastPrice = settings.breakfastPrice * numGuests * numNights;
 
-  console.log(settings);
-
   function handleCheckin() {
     if (!confirmPaid) return;
     if (addBreakfast) {

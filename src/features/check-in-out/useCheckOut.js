@@ -17,7 +17,7 @@ function useCheckOut() {
     onSuccess: (data) => {
       toast.success(`Booking ${data.id} successfully checked out`);
       queryClient.invalidateQueries({ active: true });
-      navigate(-1);
+      navigate("/dashboard");
     },
     onError: () => {
       toast.error("There was an error checking in ");

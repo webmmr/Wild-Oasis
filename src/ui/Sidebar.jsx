@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
-import Uploader from "../data/Uploader";
+// import Uploader from "../data/Uploader";
 
 const StyledSidebar = styled.aside`
   background-color: var(--color-grey-0);
@@ -13,15 +13,26 @@ const StyledSidebar = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  justify-content: space-between;
 `;
 
 function Sidebar() {
   return (
     <StyledSidebar>
-      <Logo />
-      <MainNav />
+      <div>
+        <Logo />
+        <MainNav />
+      </div>
       {/* to upload demo data */}
-      <Uploader />
+      {/* <Uploader /> */}
+      <div style={{ textAlign: "center" }}>
+        {new Date().toLocaleDateString("en-us", {
+          weekday: "long",
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })}
+      </div>
     </StyledSidebar>
   );
 }

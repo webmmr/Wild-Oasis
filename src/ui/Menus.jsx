@@ -88,6 +88,7 @@ function Toggle({ id }) {
   const { openId, close, open, setPosition } = useContext(MenusContext);
 
   function handleClick(e) {
+    e.stopPropagation();
     const rect = e.target.closest("button").getBoundingClientRect();
 
     setPosition({
@@ -109,7 +110,7 @@ function List({ id, children }) {
   const { openId, position, close } = useContext(MenusContext);
 
   //custom hook to detect click outside the registered area
-  const ref = useOutsideClick(close);
+  const ref = useOutsideClick(close, false);
 
   if (openId !== id) return null;
 

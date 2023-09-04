@@ -18,6 +18,11 @@ function Login() {
       <Logo />
 
       <LoginForm />
+      <div>
+        <p>For Testing</p>
+        <p>Email: admin@test.com</p>
+        <p>Password: password1234</p>
+      </div>
     </LoginLayout>
   );
 }
